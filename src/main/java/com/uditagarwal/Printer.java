@@ -25,16 +25,16 @@ public class Printer implements Runnable {
     @SneakyThrows
     @Override
     public void run() {
-        while (currentValue <= maxValue) {
-            synchronized (state) {
-                while (this.currentPrinterType != state.getNextToPrint()) {
-                    state.wait();
-                }
-                System.out.println(currentPrinterType.toString() + ": " + currentValue);
-                currentValue += step;
-                state.setNextToPrint(this.nextPrinterType);
-                state.notifyAll();
-            }
-        }
+//        while (currentValue <= maxValue) {
+//            synchronized (state) {
+//                while (this.currentPrinterType != state.getNextToPrint()) {
+//                    state.wait();
+//                }
+//                System.out.println(currentPrinterType.toString() + ": " + currentValue);
+//                currentValue += step;
+//                state.setNextToPrint(this.nextPrinterType);
+//                state.notifyAll();
+//            }
+//        }
     }
 }

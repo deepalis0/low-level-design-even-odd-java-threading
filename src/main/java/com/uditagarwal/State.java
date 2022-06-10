@@ -7,9 +7,9 @@ import lombok.Setter;
 @Setter
 @Getter
 public class State {
-    private PrinterType nextToPrint;
+    private FooBar nextToPrint;
 
-    public State(@NonNull final PrinterType nextToPrint) {
+    public State(@NonNull final FooBar nextToPrint) {
         this.nextToPrint = nextToPrint;
     }
 }
